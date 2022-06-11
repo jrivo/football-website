@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "http://51.158.122.33:8080"
+const API_URL = "https://api.foot.kreyzix.com";
 
 async function getCurrentMatch(matchId) {
   const response = await axios.get(API_URL+'/getNextMatch/'+matchId);

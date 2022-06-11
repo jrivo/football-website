@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import classnames from "classnames";
 
-const API_URL = "http://127.0.0.1:8080";
+const API_URL = "https://api.foot.kreyzix.com";
 
 export function LastMatches({ teamId }) {
   const [matches, setMatches] = React.useState([]);
@@ -72,7 +72,7 @@ export function LastMatches({ teamId }) {
   }
 
   return !noRights ? (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen bg-white">
       {matches.map((match) => (
         <div
           className={classnames({
@@ -131,7 +131,7 @@ export function LastMatches({ teamId }) {
       ))}
     </div>
   ) : (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen">
       <div className="flex justify-center align-middle">
         No rights for this team
       </div>

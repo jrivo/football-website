@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 // import getNextMatch from "../utils";
 import axios from "axios";
 
-const API_URL = "http://51.158.122.33:8080";
+const API_URL = "https://api.foot.kreyzix.com";
 
 export function CurrentMatch({ matchId }) {
   const [homeTeamName, setHomeTeamName] = React.useState("");
@@ -66,7 +66,7 @@ export function CurrentMatch({ matchId }) {
   }
 
   return !noRights ? (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen bg-white">
       <div className="flex justify-center align-middle">
         <div>
           <div>
@@ -96,7 +96,7 @@ export function CurrentMatch({ matchId }) {
       </div>
     </div>
   ) : (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen">
       <div className="flex justify-center align-middle">
         No rights for this match
       </div>

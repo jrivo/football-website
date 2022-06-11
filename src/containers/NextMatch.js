@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "../components/Router";
 
-const API_URL = "http://localhost:8080";
+const API_URL = "https://api.foot.kreyzix.com";
 
 export function NextMatch({ teamId }) {
   const [homeTeamName, setHomeTeamName] = React.useState("");
@@ -64,11 +64,11 @@ export function NextMatch({ teamId }) {
     }
 
   return !noRights ? (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen bg-white">
       <div className="flex justify-center align-middle">
         <div>
           <div>
-            <img src={homeTeamLogoURL}></img>
+            <img src={homeTeamLogoURL} style={{maxWidth:"150px"}}></img>
           </div>
           <div className="flex justify-center">{homeTeamName}</div>
         </div>
@@ -83,13 +83,13 @@ export function NextMatch({ teamId }) {
         </div>
         <div>
           <div>
-            <img src={awayTeamLogoURL}></img>
+            <img src={awayTeamLogoURL}style={{maxWidth:"150px"}}></img>
           </div>
           <div className="flex justify-center">{awayTeamName}</div>
         </div>
       </div>
     </div>
-  ) : ( <div className="h-screen bg-blue-400">
+  ) : ( <div className="h-screen">
   <div className="flex justify-center align-middle">
     No rights for this team
   </div>
